@@ -19,8 +19,10 @@ The best-case scenario occurs when the target element is found in the first posi
 
 Worst Case Scenario:
 The worst-case scenario occurs when the target element is not present in the array, or it's present in the last position. In this case, the algorithm would need to compare the target element against every element in the array until the last element is reached.
+----------------------------------------------------------------------------------------
+![Case study with array](Big-O/big-o-cases.png)
 
+In this program, we're using the console.time and console.timeEnd functions to measure the execution time for each scenario.
 
-
-
+When you run this program, you'll see that the best-case scenario takes significantly less time compared to the worst-case scenario. The best-case scenario's time complexity is O(1) since it takes constant time to find the target element. The worst-case scenario's time complexity is O(n) since it takes linear time, where "n" is the size of the array.
 
