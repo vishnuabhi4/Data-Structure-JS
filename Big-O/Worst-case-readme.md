@@ -13,7 +13,7 @@ Theta notation represents the average or tight bound of an algorithm's time comp
 Omicron notation, often referred to as "Big O" notation, represents the upper bound of an algorithm's time complexity. It describes the maximum amount of time an algorithm will take to complete as the input size increases. It helps us understand how an algorithm's performance scales with larger inputs.
 
 
-##Best Case Scenario:
+## Best Case Scenario:
 ---------------------
 The best-case scenario occurs when the target element is found in the first position of the array. In this case, the algorithm would only need to make one comparison.
 
