@@ -52,4 +52,4 @@ Both example1 and example2 have O(n) time complexity because they both have a lo
 
 ## Non-Dominants
 When an algorithm has multiple terms in its time complexity expression, we focus on the most dominant term as the input size grows. Non-dominant terms have a diminishing impact on performance as the input size becomes large.
-![Case study with array](https://github.com/vishnuabhi4/Data-Structure-JS/blob/Branch-One/Big-O/Assets/big-o-cases.png)
+![Case study with array](https://github.com/vishnuabhi4/Data-Structure-JS/blob/main/Big-O/Assets/Non-Dominant%20constants.png)
