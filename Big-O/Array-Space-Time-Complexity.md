@@ -2,7 +2,7 @@
 ### push(item1, item2, ...):
 * Adds one or more elements to the end of an array.
 * Returns the new length of the array.
-Time Complexity: O(1) (amortized)
+#### Time Complexity: O(1) (amortized)
 * Explanation: Adding elements to the end of the array is typically a constant-time operation. However, in some cases, when the underlying array needs to be resized, it can take longer.
 Space Complexity: O(1)
 * Explanation: Adding elements to the end of the array does not increase the space complexity significantly. In most cases, the memory allocation for the new elements is minimal.
