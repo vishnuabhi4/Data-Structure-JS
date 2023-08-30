@@ -4,7 +4,7 @@
 In JavaScript, classes are a more modern and organized way to create constructor functions and define object blueprints. Introduced in ECMAScript 2015 (ES6), classes provide a cleaner syntax for creating objects, defining methods, and handling inheritance.
 ### Constructors
 
-In JavaScript, a constructor is a special type of function that is used to create and initialize objects. Constructors are primarily used in object-oriented programming to define the blueprint or template for creating instances of objects with shared properties and methods.
+A constructor is a special type of function that is used to create and initialize objects. Constructors are primarily used in object-oriented programming to define the blueprint or template for creating instances of objects with shared properties and methods.
 ```javascript
  // Class definition for creating a Person object
 class Person {
