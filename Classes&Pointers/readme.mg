@@ -1,4 +1,3 @@
-
 ## Classes
 
 In JavaScript, classes are a more modern and organized way to create constructor functions and define object blueprints. Introduced in ECMAScript 2015 (ES6), classes provide a cleaner syntax for creating objects, defining methods, and handling inheritance.
@@ -30,5 +29,4 @@ person1.sayHello(); // Output: Hello, my name is Alice and I am 30 years old.
 person2.sayHello(); // Output: Hello, my name is Bob and I am 25 years old.
 
 ```
-
 
