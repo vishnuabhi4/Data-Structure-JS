@@ -58,3 +58,5 @@ linkedList.append(3);
 
 console.log(linkedList.toArray()); // Output: [1, 2, 3]
 ```
+#### Singly Linked List vs Doubly Linked List
+* The main difference between singly linked lists and doubly linked lists is that doubly linked lists have pointers to both the next and previous nodes, while singly linked lists only have pointers to the next node. This makes doubly linked lists more versatile, as they can be traversed in both directions. However, singly linked lists are simpler and require less memory, so they are sometimes preferred for applications where speed is critical.
