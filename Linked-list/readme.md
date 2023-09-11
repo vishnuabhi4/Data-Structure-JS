@@ -69,5 +69,5 @@ console.log(linkedList.toArray()); // Output: [1, 2, 3]
 * Removing an item at a specific index: O(n) - Linear time.
 * Finding an item by value: O(n) - Linear time.
 * Finding an item by index: O(n) - Linear time.
-  #### Object type representation
-![App Screenshot]()
+#### Object type representation
+![Screenshot](https://github.com/vishnuabhi4/Data-Structure-JS/blob/main/Big-O/Assets/linked%20list%20object.png?raw=true)
