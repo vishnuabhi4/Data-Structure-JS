@@ -6,7 +6,9 @@ class Node {
         this.next = null;
     }
 }
- 
+```
+* You can create instances of the Node class to represent individual elements (nodes) in the list, and then use these nodes to construct the linked list by connecting them using the next property.
+```
 class LinkedList {
     constructor(value) {
         const newNode = new Node(value);
