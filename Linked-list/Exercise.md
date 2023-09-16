@@ -16,6 +16,22 @@ class LinkedList {
         this.tail = this.head;
         this.length = 1;
     }
+ append(value) {
+        const newNode = new Node(value);
+
+        if (this.head === null) {
+            // If the list is empty, set both head and tail to the new node
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            // Otherwise, update the current tail's next pointer to the new node
+            this.tail.next = newNode;
+            // Update the tail to be the new node
+            this.tail = newNode;
+        }
+
+        // Increment the length
+        this.length++;
 
     printList() {
         let temp = this.head;
@@ -24,7 +40,6 @@ class LinkedList {
             temp = temp.next;
         }
     }
-
     getHead() {
         if (this.head === null) {
             console.log("Head: null");
