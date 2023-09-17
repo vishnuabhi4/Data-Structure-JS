@@ -71,6 +71,7 @@ function test() {
     myLinkedList.getLength();
     console.log("\nLinked List:");
     myLinkedList.printList();
+    myLinkedList.append(5);
 }
 
 
@@ -81,10 +82,10 @@ test();
     ----------------
     Head: 4
     Tail: 4
-    Length: 1
+    Length: 2
     
     Linked List:
     4
-
+    5
 */
 
