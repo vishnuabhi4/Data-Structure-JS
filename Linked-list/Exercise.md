@@ -11,6 +11,7 @@ class Node {
 ```
 class LinkedList {
     constructor(value) {
+    // initilize the L-L with head, tail, and length to form L-L
         const newNode = new Node(value);
         this.head = newNode;
         this.tail = this.head;
