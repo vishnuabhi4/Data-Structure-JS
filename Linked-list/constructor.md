@@ -54,6 +54,8 @@ myList.append(2);
 myList.append(3);
 myList.display();
 ```
+* current serves as a temporary variable that is used to traverse the linked list and keep track of the current node during operations.
+* In a singly linked list, where you only need to traverse the list forward, it's not always necessary to maintain a separate tail pointer. You can typically accomplish what you need with just a head pointer and a temporary variable like current to traverse the list.
 #### The `while` conditions in the JavaScript code I provided are used to traverse the linked list. Let me explain them in detail:
 
 * In the `append(data)` method:
