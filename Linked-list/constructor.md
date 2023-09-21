@@ -10,3 +10,47 @@
 * It sets the head property of the linked list to point to the newly created node.
 * It sets the tail property of the linked list to also point to the newly created node.
 * It initializes the length property to 1 to indicate that there is one node in the list.
+
+```
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+
+    append(data) {
+        const newNode = new Node(data);
+        if (!this.head) {
+            this.head = newNode;
+            return;
+        }
+        let current = this.head;
+        while (current.next) {
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
+    display() {
+        let current = this.head;
+        while (current) {
+            console.log(current.data + " -> ");
+            current = current.next;
+        }
+        console.log("null");
+    }
+}
+
+// Example usage:
+const myList = new LinkedList();
+myList.append(1);
+myList.append(2);
+myList.append(3);
+myList.display();
+```
