@@ -54,3 +54,13 @@ myList.append(2);
 myList.append(3);
 myList.display();
 ```
+#### The `while` conditions in the JavaScript code I provided are used to traverse the linked list. Let me explain them in detail:
+
+* In the `append(data)` method:
+   * `if (!this.head)` checks if the linked list is empty. If it is, the new node becomes the head of the list.
+   * `while (current.next)` iterates through the list until it finds the last node (i.e., the node with `current.next` set to `null`). This is where the new node is appended.
+
+* In the `display()` method:
+   * `while (current)` iterates through the linked list, printing the data of each node until it reaches the end of the list (when `current` becomes `null`).
+
+#### These `while` conditions ensure that you can correctly add new nodes to the end of the linked list and display its contents.
