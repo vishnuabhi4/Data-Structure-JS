@@ -64,3 +64,26 @@ myList.display();
    * `while (current)` iterates through the linked list, printing the data of each node until it reaches the end of the list (when `current` becomes `null`).
 
 #### These `while` conditions ensure that you can correctly add new nodes to the end of the linked list and display its contents.
+# .next
+#### In JavaScript, when you create a Node object with the next property, like this
+```
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+```
+* The next property is a reference to the next node in the linked list. It starts as null when you create a new node, indicating that there is no node after it.
+* When you create a linked list and use the append(data) method to add nodes, the next property is assigned appropriately to create the linkage between nodes. For example:
+
+```
+const myList = new LinkedList();
+myList.append(1);
+myList.append(2);
+myList.append(3);
+```
+* In this case, the append method creates a linked list like this:
+```
+1 -> 2 -> 3 -> null
+```
