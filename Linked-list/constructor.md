@@ -87,3 +87,9 @@ myList.append(3);
 ```
 1 -> 2 -> 3 -> null
 ```
+#### Here's a step-by-step breakdown of what happens in the append method:
+
+* When you add the first element (1), it becomes the head, and the next property of this node is null.
+* When you add the second element (2), it becomes the next node after the head, and the next property of the head is set to point to this new node.
+* Similarly, when you add the third element (3), it becomes the next node after 2, and the next property of 2 is set to point to this new node.
+* So, the .next property is what creates the linkage between nodes in the linked list, allowing you to traverse the list from one node to the next.
