@@ -58,3 +58,6 @@ class LinkedList {
     //
 
 ```
+* Local Variables: Variables declared within functions or methods, like temp in the printList() method, are local variables. They hold temporary values used for iteration or storing intermediate results within a specific function scope.
+* Variables like this.head, this.tail, and this.length in the LinkedList class are instance variables or properties. They store data related to each instance of the LinkedList class and are accessible throughout the class methods using this.
+* 
