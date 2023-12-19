@@ -52,3 +52,7 @@ linkedList.append(40);
 console.log(linkedList.search(20)); // Output: true
 console.log(linkedList.search(35)); // Output: false
 ```
+* Node class represents each node in the linked list, containing data and a reference to the next node.
+* LinkedList class represents the linked list itself, initializing with a head node.
+* append() method adds a new node with the provided data to the end of the linked list.
+* search() method traverses the linked list, checking each node's data until it finds the specified value. If found, it returns true; otherwise, it returns false.
