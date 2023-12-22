@@ -1,3 +1,4 @@
+### Checking if the array has dupicate numbers
 ```
 // Define the containsDuplicate function
 const containsDuplicate = (nums) => {
