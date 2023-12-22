@@ -21,3 +21,31 @@ if (hasDuplicates) {
     console.log("The array does not contain duplicates.");
 }
 ```
+### Two sum
+```
+var twoSum = (nums, target) => {
+    for (let curr = 0; curr < nums.length; curr++) {
+        const complement = target - nums[curr];
+
+        for (let next = (curr + 1); next < nums.length; next++) {
+            const num = nums[next];
+
+            const isTarget = num === complement
+            if (isTarget) return [curr, next];
+        }
+    }
+
+    return [-1, -1];
+}
+
+const nums = [2, 7, 11, 15];
+const target = 9;
+
+// Call the twoSum function with the nums array and target value
+const result = twoSum(nums, target);
+
+console.log("Indices of the two numbers:", result);
+
+```
+* In the case of the twoSum function, this return statement [ -1, -1 ] is returning an array with two -1 values. This can serve as an indicator or convention to signal that the function did not find a valid solution or pair of elements in the input array that satisfies the conditions set within the function.
+
