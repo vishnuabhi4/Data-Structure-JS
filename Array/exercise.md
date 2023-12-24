@@ -69,7 +69,7 @@ const getSum = (nums, target, map) => {
     for (let index = 0; index < nums.length; index++) {/* Time O(N) */
         const valMinusTar = target - nums[index];
         const sumIndex = map.get(valMinusTar);
-        // Retrieve the index of the valMinusTar from the map
+        // Retrieve the index of the valMinusTar from the "map" which is created in twoSum function (only if there is one)
 
         const isTarget = map.has(valMinusTar) && (map.get(valMinusTar) !== index)
         // Check if the complement exists in the map and is not the same index as the current number
@@ -82,6 +82,13 @@ const getSum = (nums, target, map) => {
 const nums = [2, 7, 11, 15];
 const target = 9;
 
-console.log(twoSum(nums, target));
+console.log(twoSum(nums, target)); //initiate code here
 
 ```
+* new Map() – creates the map.
+* map.set(key, value) – stores the value by the key.
+* map.get(key) – returns the value by the key, undefined if key doesn’t exist in map.
+* map.has(key) – returns true if the key exists, false otherwise.
+* map.delete(key) – removes the element (the key/value pair) by the key.
+* map.clear() – removes everything from the map.
+* map.size – returns the current element count.
