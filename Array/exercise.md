@@ -69,7 +69,7 @@ const getSum = (nums, target, map) => {
     for (let index = 0; index < nums.length; index++) {/* Time O(N) */
         const valMinusTar = target - nums[index];
         const sumIndex = map.get(valMinusTar);
-        // Retrieve the index of the valMinusTar from the "map" which is created in twoSum function (only if there is one)
+        // Retrieve the index(key not necesserly index like in arrays) of the valMinusTar from the "map" which is created in twoSum function (only if there is one)
 
         const isTarget = map.has(valMinusTar) && (map.get(valMinusTar) !== index)
         // Check if the complement exists in the map and is not the same index as the current number
@@ -85,6 +85,7 @@ const target = 9;
 console.log(twoSum(nums, target)); //initiate code here
 
 ```
+### Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
 * new Map() – creates the map.
 * map.set(key, value) – stores the value by the key.
 * map.get(key) – returns the value by the key, undefined if key doesn’t exist in map.
