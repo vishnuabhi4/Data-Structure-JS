@@ -66,11 +66,11 @@ const getMap = (nums, map = new Map()) => {
 
 const getSum = (nums, target, map) => {
     for (let index = 0; index < nums.length; index++) {/* Time O(N) */
-        const complement = target - nums[index];
-        const sumIndex = map.get(complement);
-        // Retrieve the index of the complement from the map
+        const valMinusTar = target - nums[index];
+        const sumIndex = map.get(valMinusTar);
+        // Retrieve the index of the valMinusTar from the map
 
-        const isTarget = map.has(complement) && (map.get(complement) !== index)
+        const isTarget = map.has(valMinusTar) && (map.get(valMinusTar) !== index)
         // Check if the complement exists in the map and is not the same index as the current number
         if (isTarget) return [ index, sumIndex ]
     }
