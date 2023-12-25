@@ -52,7 +52,8 @@ console.log("Indices of the two numbers:", result);
 ```
 var twoSum = (nums, target) => {
     const map = getMap(nums);       /* Time O(N) | Space O(N) */
-    // iterates through the nums array and sets each element of nums as a key in the Map with its corresponding index as the value.
+    // iterates through the nums array and sets each element of nums as a "KEY" in the Map with its corresponding index as the value.
+    // 7 as key = 0 as index, 2 as key = 1 as index
     return getSum(nums, target, map)/* Time O(N) */
     //return statement is used to pass a value back from a function.(which is console.log in this case )
 }
