@@ -103,3 +103,5 @@ The getSum function receives the map variable as an argument and can use it with
 When the map variable is returned from the twoSum function as part of return getSum(nums, target, map), it's passed as an argument to the getSum function.
 The getSum function receives the map variable as an argument and can use it within its own scope.
 * The map variable is not directly returned to an outer context like the global scope; rather, it's passed as an argument to the getSum function. Its accessibility will be within the scope of getSum function where it's received as an argument. The scope of a variable refers to where in the code it's accessible or usable. In this case, map is accessible within the getSum function where it's passed as an argument, and its scope is defined by the function block of getSum.
+### Parentheses necessity
+* In JavaScript, using parentheses around map.get(valMinusTar) in the expression map.get(valMinusTar) !== index is not strictly necessary. The parentheses are used for clarity and to ensure that the comparison (!==) operates correctly, especially when used in conjunction with logical operators.
