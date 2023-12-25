@@ -72,7 +72,7 @@ const getSum = (nums, target, map) => {
         // Retrieve the index(key not necesserly index like in arrays) of the valMinusTar from the "map" which is created in twoSum function (only if there is one)
 
         const isTarget = map.has(valMinusTar) && (map.get(valMinusTar) !== index)
-        // Check if the complement exists in the map and is not the same index as the current number
+        // Check if the complement exists in the map and is not the same index(nums[index] value) as the current number
         if (isTarget) return [ index, sumIndex ]
     }
 
