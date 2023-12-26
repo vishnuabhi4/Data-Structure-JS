@@ -109,24 +109,40 @@ The getSum function receives the map variable as an argument and can use it with
 * In JavaScript, using parentheses around map.get(valMinusTar) in the expression map.get(valMinusTar) !== index is not strictly necessary. The parentheses are used for clarity and to ensure that the comparison (!==) operates correctly, especially when used in conjunction with logical operators.
 # Two sum
 * One pass - Hash Map
-  ```
-  var twoSum = (nums, target, map = new Map()) => {
-    for (let index = 0; index < nums.length; index++) {/* Time O(N) */
-        const num = nums[index];
-        const complement = (target - num);
-        const sumIndex = map.get(complement);
+```
+var twoSum = (nums, target, map = new Map()) => {
+    for (let index = 0; index < nums.length; index++) {
+        /* Iterate through the nums array */
 
-        const isTarget = map.has(complement)
-        if (isTarget) return [ index, sumIndex ];
+        const num = nums[index]; // Get the current number in nums
+        const complement = (target - num); // Calculate the complement needed to reach the target
 
-        map.set(num, index);                                /* Space O(N) */
+        const sumIndex = map.get(complement); // Retrieve the index of complement from the Map
+
+        const isTarget = map.has(complement); // Check if complement exists in the Map
+        if (isTarget) {
+            return [index, sumIndex]; // Return indices if complement exists (valid pair found)
+        }
+
+        map.set(num, index); // Store current num as a key and its index as the value in the Map
     }
 
-    return [ -1, -1 ];
+    return [-1, -1]; // Return [-1, -1] if no valid pair found
 }
 
-const nums = [2,9,7,5];
+const nums = [2, 9, 7, 5];
 const target = 9;
 
-console.log(twoSum(nums,target));
+console.log(twoSum(nums, target));
 ```
+* `var twoSum = (nums, target, map = new Map()) => { }`
+* This default parameter `map = new Map()` ensures that if the map argument is not passed explicitly when invoking twoSum, a new Map will be created automatically within the function, even if nums is not passed to the Map() constructor.
+
+* Therefore, the line var twoSum = (nums, target, map = new Map()) => { ... } doesn't directly require nums to be passed as a parameter in the Map() function for the default Map instance creation. The default parameter initializes map with a new Map instance if not provided explicitly when calling twoSum.
+
+
+
+
+
+
+
