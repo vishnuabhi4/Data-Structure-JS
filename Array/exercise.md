@@ -21,7 +21,8 @@ if (hasDuplicates) {
     console.log("The array does not contain duplicates.");
 }
 ```
-### Two sum
+### Two sum 
+*Two pass - Hash Map
 ```
 var twoSum = (nums, target) => {
     for (let curr = 0; curr < nums.length; curr++) {
@@ -106,3 +107,26 @@ The getSum function receives the map variable as an argument and can use it with
 * The map variable is not directly returned to an outer context like the global scope; rather, it's passed as an argument to the getSum function. Its accessibility will be within the scope of getSum function where it's received as an argument. The scope of a variable refers to where in the code it's accessible or usable. In this case, map is accessible within the getSum function where it's passed as an argument, and its scope is defined by the function block of getSum.
 ### Parentheses necessity
 * In JavaScript, using parentheses around map.get(valMinusTar) in the expression map.get(valMinusTar) !== index is not strictly necessary. The parentheses are used for clarity and to ensure that the comparison (!==) operates correctly, especially when used in conjunction with logical operators.
+# Two sum
+* One pass - Hash Map
+  ```
+  var twoSum = (nums, target, map = new Map()) => {
+    for (let index = 0; index < nums.length; index++) {/* Time O(N) */
+        const num = nums[index];
+        const complement = (target - num);
+        const sumIndex = map.get(complement);
+
+        const isTarget = map.has(complement)
+        if (isTarget) return [ index, sumIndex ];
+
+        map.set(num, index);                                /* Space O(N) */
+    }
+
+    return [ -1, -1 ];
+}
+
+const nums = [2,9,7,5];
+const target = 9;
+
+console.log(twoSum(nums,target));
+```
