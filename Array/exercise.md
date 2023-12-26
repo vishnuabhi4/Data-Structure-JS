@@ -122,7 +122,7 @@ var twoSum = (nums, target, map = new Map()) => {
         const isTarget = map.has(complement); // Check if complement exists in the Map
         if (isTarget) {
             return [index, sumIndex]; // Return indices if complement exists (valid pair found)
-        }
+                }
 
         map.set(num, index); // Store current num as a key and its index as the value in the Map
     }
@@ -138,7 +138,7 @@ console.log(twoSum(nums, target));
 * `var twoSum = (nums, target, map = new Map()) => { }`
 * This default parameter `map = new Map()` ensures that if the map argument is not passed explicitly when invoking twoSum, a new Map will be created automatically within the function, even if nums is not passed to the Map() constructor.
 
-* Therefore, the line var twoSum = (nums, target, map = new Map()) => { ... } doesn't directly require nums to be passed as a parameter in the Map() function for the default Map instance creation. The default parameter initializes map with a new Map instance if not provided explicitly when calling twoSum.
+* Therefore, the line `var twoSum = (nums, target, map = new Map()) => { ... }` will create an empty map and `map.set(num, index);` line will set key value pairs of nums array with for loop
 
 
 
