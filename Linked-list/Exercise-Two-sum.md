@@ -61,3 +61,4 @@ output += "null";
 
 console.log("Resulting linked list: " + output);
 ```
+*  in JavaScript, objects can contain other objects as properties. In the context of linked lists, each node is an object containing two properties (val and next). The next property itself points to another node (object) or can be null to indicate the end of the list.
