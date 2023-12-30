@@ -22,7 +22,7 @@ function addTwoNumbers(l1, l2) {
         const sum = x + y + carry;
 
         carry = Math.floor(sum / 10);
-        current.next = new ListNode(sum % 10);
+        current.next = new ListNode(sum % 10); //Calculates the remainder of sum when divided by 10
         current = current.next;
 
         if (l1 !== null) l1 = l1.next;
