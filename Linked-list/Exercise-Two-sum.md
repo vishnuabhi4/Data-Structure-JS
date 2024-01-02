@@ -68,7 +68,13 @@ class ListNode {
         this.next = next;
     }
 }
-
+operty itself points to another node (object) or can be null to indicate the end of the list.
+* Math.floor() is a JavaScript function that returns the largest integer less than or equal to a given number. It takes a single argument, the number you want to round down, and returns the largest integer less than or equal to that number.
+For example:
+Math.floor(3.9); // Output: 3
+Math.floor(7.2); // Output: 7
+Math.floor(-5.5); // Output: -6
+```
 // Function to add two numbers represented as linked lists
 var addTwoNumbers = function(l1, l2, carry = 0) {
     let sentinel = tail = new ListNode();
@@ -110,10 +116,4 @@ while (result !== null) {
 output += "null";
 
 console.log("Resulting linked list: " + output);
-operty itself points to another node (object) or can be null to indicate the end of the list.
-* Math.floor() is a JavaScript function that returns the largest integer less than or equal to a given number. It takes a single argument, the number you want to round down, and returns the largest integer less than or equal to that number.
-For example:
-Math.floor(3.9); // Output: 3
-Math.floor(7.2); // Output: 7
-Math.floor(-5.5); // Output: -6
-
+```
