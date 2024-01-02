@@ -75,6 +75,14 @@ Math.floor(3.9); // Output: 3
 Math.floor(7.2); // Output: 7
 Math.floor(-5.5); // Output: -6
 ```
+// Definition for a singly-linked list node
+class ListNode {
+    constructor(val = 0, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
+
 // Function to add two numbers represented as linked lists
 var addTwoNumbers = function(l1, l2, carry = 0) {
     let sentinel = tail = new ListNode();
@@ -116,4 +124,5 @@ while (result !== null) {
 output += "null";
 
 console.log("Resulting linked list: " + output);
+
 ```
