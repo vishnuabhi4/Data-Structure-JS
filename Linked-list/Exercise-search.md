@@ -1,44 +1,42 @@
 ```
 class Node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
+  constructor(data) {                       // Constructor function that initializes the data and next properties of a node
+    this.data = data;                       // Data stored in the node
+    this.next = null;                       // Pointer to the next node
   }
 }
 
 class LinkedList {
-  constructor() {
-    this.head = null;
+  constructor() {                           // Constructor function that initializes the head property of the linked list
+    this.head = null;                       // Head of the linked list
   }
 
-  // Method to insert a node at the end of the linked list
-  append(data) {
-    const newNode = new Node(data);
+  append(data) {                            // Method to insert a node at the end of the linked list
+    const newNode = new Node(data);         // Create a new node with the given data
 
-    if (!this.head) {
+    if (!this.head) {                       // If the linked list is empty, set the head to the new node
       this.head = newNode;
       return;
     }
 
-    let current = this.head;
-    while (current.next) {
+    let current = this.head;               // Start at the head of the linked list
+    while (current.next) {                 // Traverse the linked list until the last node is reached
       current = current.next;
     }
-    current.next = newNode;
+    current.next = newNode;                 // Set the next property of the last node to the new node
   }
 
-  // Method to search for a specific value in the linked list
-  search(value) {
-    let current = this.head;
+  search(value) {                           // Method to search for a specific value in the linked list
+    let current = this.head;                // Start at the head of the linked list
 
-    while (current) {
-      if (current.data === value) {
-        return true; // Node with the specified value found
+    while (current) {                       // Traverse the linked list until the last node is reached
+      if (current.data === value) {         // If the current node's data matches the value, return true
+        return true;
       }
-      current = current.next;
+      current = current.next;               // Move to the next node
     }
 
-    return false; // Node with the specified value not found
+    return false;                           // If the value is not found, return false
   }
 }
 
