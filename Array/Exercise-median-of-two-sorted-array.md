@@ -13,7 +13,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
     let [left, right] = [0, nums1.length - 1];                         // Initialize pointers for binary search
 
     const totalLength = nums1.length + nums2.length;                   // Calculate the total length and the mid index of the merged array
-    const mid = totalLength >> 1; // Integer division by 2
+    const mid = totalLength >> 1;                                      // Integer division by 2
     const isEven = totalLength % 2 === 0;                              // Check if the total length is even
 
     while (true) {                                                     // Binary search to find the median
@@ -58,7 +58,7 @@ const getPointers = (nums1, mid1, nums2, mid2) => {                             
 console.log(findMedianSortedArrays([1, 2], [3, 4]));                                 // Print the output of findMedianSortedArrays function to the console
 
 ```
-#Docs...
+# Docs...
 ### Array swap
 ```
 let canSwap = true;
