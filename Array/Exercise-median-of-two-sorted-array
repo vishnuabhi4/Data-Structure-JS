@@ -58,3 +58,17 @@ const getPointers = (nums1, mid1, nums2, mid2) => {                             
 console.log(findMedianSortedArrays([1, 2], [3, 4]));                                 // Print the output of findMedianSortedArrays function to the console
 
 ```
+#Docs...
+### Array swap
+```
+let canSwap = true;
+let nums1 = [1, 2, 3];
+let nums2 = [4, 5, 6];
+
+if (canSwap) {
+  [nums1, nums2] = [nums2, nums1];
+}
+
+console.log(nums1); // Output: [4, 5, 6]
+console.log(nums2); // Output: [1, 2, 3]
+```
