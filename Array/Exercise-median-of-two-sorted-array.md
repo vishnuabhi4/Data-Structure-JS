@@ -41,14 +41,14 @@ var findMedianSortedArrays = function (nums1, nums2) {
     }
 };
 
-const getPointers = (nums1, mid1, nums2, mid2) => {                                // Function to retrieve pointers to elements on both sides of the mid indices
+const getPointers = (nums1, mid1, nums2, mid2) => {                              // Function to retrieve pointers to elements on both sides of the mid indices
   
     const getLeft = (nums, index) => (0 <= index ? nums[index] : -Infinity);     // Helper function to get the left element or -Infinity if index is out of bounds
    
-    const [aLeft, bLeft] = [getLeft(nums1, mid1), getLeft(nums2, mid2)];             // Calculate left pointers for both arrays
+    const [aLeft, bLeft] = [getLeft(nums1, mid1), getLeft(nums2, mid2)];         //Destructuring assignment (in Docs) and calling getLeft with 2 parameter
 
   
-    const getRight = (nums, index) =>                                                // Helper function to get the right element or Infinity if index is out of bounds
+    const getRight = (nums, index) =>                                            // Helper function to get the right element or Infinity if index is out of bounds
         index + 1 < nums.length ? nums[index + 1] : Infinity;
  
     const [aRight, bRight] = [getRight(nums1, mid1), getRight(nums2, mid2)];         // Calculate right pointers for both arrays
@@ -72,6 +72,9 @@ if (canSwap) {
 console.log(nums1); // Output: [4, 5, 6]
 console.log(nums2); // Output: [1, 2, 3]
 ```
+### `Destructuring assignment` 
+* allows you to extract values from arrays or properties from objects and assign them to variables in a more concise way. In this case, the array [getLeft(nums1, mid1), getLeft(nums2, mid2)] is being destructured into two variables, aLeft and bLeft, respectively 1
+  
 ### `let [left, right] = [0, nums1.length - 1];`
 * It assigns the value of 0 to left and the value of nums1.length - 1 to right using array destructuring 12.
 * The square brackets [ ] create an array with two elements, where the first element is 0 and the second element is nums1.length - 1.
