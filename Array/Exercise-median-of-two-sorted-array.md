@@ -16,8 +16,8 @@ var findMedianSortedArrays = function (nums1, nums2) {
     const mid = totalLength >> 1;                                      // Integer division by 2
     const isEven = totalLength % 2 === 0;                              // Check if the total length is even
 
-    while (true) {                                                     // Binary search to find the median
-        const mid1 = left + right;                                     // Calculate mid indices for both arrays based on left and right pointers
+    while (true) {                                                     // while (true) creates an infinite loop. The condition specified (true) is always truthy
+        const mid1 = left + right;                                     // The loop stops condition is met, which results in a return 
         const mid2 = mid - mid1 - 2;
 
         const { aLeft, aRight, bLeft, bRight } = getPointers(          // Get pointers to elements on both sides of mid indices in both arrays
@@ -43,8 +43,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
 
 const getPointers = (nums1, mid1, nums2, mid2) => {                              // Function to retrieve pointers to elements on both sides of the mid indices
   
-    const getLeft = (nums, index) => (0 <= index ? nums[index] : -Infinity);     // Helper function to get the left element or -Infinity if index is out of bounds
-   
+    const getLeft = (nums, index) => (0 <= index ? nums[index] : -Infinity);     // Helper function to get the left element or -Infinity if index is out of bounds                                                                                // nums[index] will represent the value at that particular index within the array nums
     const [aLeft, bLeft] = [getLeft(nums1, mid1), getLeft(nums2, mid2)];         //Destructuring assignment (in Docs) and calling getLeft with 2 parameter
 
   
