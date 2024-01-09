@@ -76,3 +76,7 @@ console.log(nums2); // Output: [1, 2, 3]
 * It assigns the value of 0 to left and the value of nums1.length - 1 to right using array destructuring 12.
 * The square brackets [ ] create an array with two elements, where the first element is 0 and the second element is nums1.length - 1.
 * The destructuring assignment syntax let [left, right] = assigns the first element of the array to left and the second element of the array to right.
+### `const getLeft = (nums, index) => (0 <= index ? nums[index] : -Infinity);`
+* In the given code, index is a parameter of the functions getLeft and getRight. It is used to access the elements of the nums array. The nums parameter is an array of numbers, and index is the index of the element that needs to be accessed. If the index is out of bounds, getLeft returns -Infinity, and getRight returns Infinity
+###  `const [aLeft, bLeft] = [getLeft(nums1, mid1), getLeft(nums2, mid2)]`
+* It is a destructuring assignment statement. It assigns the return values of the getLeft function to the variables aLeft and bLeft. The getLeft function takes two arguments: nums and index. nums is an array of numbers, and index is the index of the element that needs to be accessed. If the index is out of bounds, getLeft returns -Infinity 1
