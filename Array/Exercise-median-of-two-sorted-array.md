@@ -8,7 +8,7 @@
 var findMedianSortedArrays = function (nums1, nums2) {
    
     const canSwap = nums2.length < nums1.length;                       // Check if nums2's length is smaller than nums1's length and swap them if so
-    if (canSwap) [nums1, nums2] = [nums2, nums1];
+    if (canSwap) [nums1, nums2] = [nums2, nums1];                      // if so then swap arrays num1=[1,2] num2=[3] then num2=[1,2]
 
     let [left, right] = [0, nums1.length - 1];                         // Initialize pointers for binary search
 
