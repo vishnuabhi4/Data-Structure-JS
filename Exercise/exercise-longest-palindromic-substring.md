@@ -1,7 +1,7 @@
 ```
 var longestPalindrome = (s) => {
-    const isEmpty = s.length === 0;
-    if (isEmpty) return '';
+    const isEmpty = s.length === 0;                 //checking if the input string is empty.
+    if (isEmpty) return ''; 
 
     const [ left, right ] = search(s);/* Time O(N * N) */
 
@@ -29,7 +29,7 @@ const getLength = (s, left, right) => {
     const isSame = () => (s[left] === s[right]);
 
     const isPalindrome = () => (canExpand() && isSame());
-    while (isPalindrome()) { left--; right++; }/* Time O(N) */
+    while (isPalindrome()) { left--; right++; }/* Time O(N) */             //isPalindrome is invoked until its true.
 
     const window = ((right - left) - 1);
 
