@@ -38,3 +38,10 @@ const getLength = (s, left, right) => {
 
 console.log(longestPalindrome("abba"));
 ```
+# Docs
+```
+const isPalindrome = () => (canExpand() && isSame());
+    while (isPalindrome()) { left--; right++; }
+```
+function called isPalindrome that returns true if canExpand() and isSame() are both true. The function does not take any arguments.
+The while loop in the code will continue to execute as long as isPalindrome() returns true. In each iteration of the loop, the values of left and right are incremented and decremented, respectively. The loop will exit when isPalindrome() returns false.
