@@ -28,7 +28,7 @@ const getLength = (s, left, right) => {
     const canExpand = () => ((0 <= left) && (right < s.length));
     const isSame = () => (s[left] === s[right]);
 
-    const isPalindrome = () => (canExpand() && isSame());
+    const isPalindrome = () => (canExpand() && isSame());                  //console.log(typeof(isPalindrome)); out:function
     while (isPalindrome()) { left--; right++; }/* Time O(N) */             //isPalindrome is invoked until its true.
 
     const window = ((right - left) - 1);
@@ -57,3 +57,5 @@ Therefore, the while loop will execute once, and left
 and right will both be decremented by 1. The value of 
 window will be 0, since right - left - 1 is equal to -1. 
 The function will then return 0 as the output.
+* isPalindrome itself is not true or false - it’s a function. It’s only when you call the function (i.e., isPalindrome()) that it evaluates to true or false, depending on the return values of canExpand() and isSame().
+* This is a key aspect of JavaScript and many other programming languages: functions are first-class objects, meaning they can be assigned to variables, stored in data structures, passed as arguments to other functions, and so on. In this case, isPalindrome is a variable that holds a function. The value of isPalindrome is not the result of the function, but the function itself. So, you’re right that isPalindrome is neither true nor false after the execution of the first line. It’s a function.
